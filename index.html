@@ -25,30 +25,60 @@
 </head>
 
 <body>
+  <div class="card">
+    <!-- Rating state start -->
+    <div id="ratingState" class="rating-state">
+      <div id="star-icon"></div>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <div class="rating-buttons" id="ratingButtons">
+        <button class="rating-btn" data-value="1"><span>1</span></button>
+        <button class="rating-btn" data-value="2"><span>2</span></button>
+        <button class="rating-btn" data-value="3"><span>3</span></button>
+        <button class="rating-btn" data-value="4"><span>4</span></button>
+        <button class="rating-btn" data-value="5"><span>5</span></button>
+      </div>
 
-  <!-- Rating state start -->
+      <button class="submit-btn" id="submitBtn">Submit</button>
+    </div>
 
-  <h1>How did we do?</h1>
-  <p>
-    Please let us know how we did with your support request. All feedback is appreciated
-    to help us improve our offering!
-  </p>
+    <!-- Thank you state start -->
+    <div id="thankYouState" class="thank-you">
+      <div class="illustration">
+        <div class="dashed-line"></div>
+        <div class="phone-icon"></div>
+        <div class="ticket-icon"></div>
+        <div class="circle-accent"></div>
+
+        <div class="selection-badge">You selected <span id="selectedRating">4</span> out of 5</div>
+      </div>
+
+      <h2> Thank you!</h2>
+      <p class="description">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+  </div>
 
 
-  1 2 3 4 5
 
-  Submit
+
+
+
 
   <!-- Rating state end -->
 
-  <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
 
-  Thank you!
+  <!-- Add rating here -->
 
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don’t hesitate to get in touch!
+
+
+
 
   <!-- Thank you state end -->
 
