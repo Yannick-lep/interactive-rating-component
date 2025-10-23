@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* variable des couleurs */
+
+:root {
+    /* color */
+    --orange: hsl(25, 95%, 53%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* création variable font family */
+:root {
+    --font-family-base: 'Overpass';
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+body {
+    font-family: var(--font-family-base), sans-serif;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background: var(--medium-grey);
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 20px 60px var(--medium-grey);
+}
+
+img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+}
+p {
+    color: var(--light-grey);
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+.description {
+    color: var(--white);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.rating-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+    justify-content: space-between;
+}
+
+.rating-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.rating-btn::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--orange);
+    transform: translate(-50%, -50%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.rating-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.rating-btn.hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+.rating-btn.hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.rating-btn.selected {
+    background-color: var(--orange);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 26px;
+    background-color: var(--orange);
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(252, 118, 20, 0.4);
+}
+
+.submi-btn:active {
+    transform: translateY(0);
+}
+
+.thank-you {
+    text-align: center;
+    display: none;
+}
+
+.thank-you.active {
+    display: block;
+}
+
+.illustration {
+    margin: 0 auto 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 120px;
+}
+
+.phone-icon {
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(135deg, #424b5a 0%, #2d3541 100%);
+    border-radius: 12px;
+    position: relative;
+    height: 120px;
+}
+
+.phone-icon::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    background: linear-gradient(180deg, #e8e8e8 0%, #e8630f 100%);
+    border-radius: 6px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    transform: rotate(-15deg);
+    box-shadow: 0 6px 16px rgba(252, 118, 20, 0.4);
+}
+
+.ticket-icon {
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(135deg, #fc7614 0%, #e8630f 100%);
+    border-radius: 6px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    transform: rotate(-15deg);
+    box-shadow: 0 6px 16px rgba(252, 118, 20, 0.4);
+}
+
+.ticket-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%);
+}
+
+.circle-accent {
+    width: 20px;
+    height: 20px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.dashed-line {
+    position: absolute;
+    left: 35px;
+    top: 40px;
+    width: 60px;
+    height: 60px;
+    border: 2px dashed rgba(252, 118, 20, 0.3);
+    border-radius: 50%;
+}
+
+.selection-badge {
+    display: inline-block;
+    background-color: var(--very-dark-blue);
+    color: var(--orange);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.thank-you h1 {
+    margin-bottom: 12px;
+}
+
+.thank-you .description {
+    margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+.card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@media (max-widht: 375px) {
+    .card {
+        padding: 32px 24px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .rating-buttons {
+        gap: 12px;
+    }
+
+    .rating-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 14px;
+    }
+}

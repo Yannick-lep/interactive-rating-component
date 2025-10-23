@@ -6,29 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <script type="module" src="assets/js/script.js" defer></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <div class="card">
     <!-- Rating state start -->
     <div id="ratingState" class="rating-state">
-      <div id="star-icon"></div>
+      <div id="star-icon"><img src="images/icon-star.svg" alt=""></div>
       <h1>How did we do?</h1>
       <p>
         Please let us know how we did with your support request. All feedback is appreciated
@@ -48,44 +38,21 @@
     <!-- Thank you state start -->
     <div id="thankYouState" class="thank-you">
       <div class="illustration">
+        <img src="images/illustration-thank-you.svg" alt="">
         <div class="dashed-line"></div>
         <div class="phone-icon"></div>
         <div class="ticket-icon"></div>
         <div class="circle-accent"></div>
-
-        <div class="selection-badge">You selected <span id="selectedRating">4</span> out of 5</div>
       </div>
-
-      <h2> Thank you!</h2>
+      
+      <div class="selection-badge">You selected <span id="selectedRating">4</span> out of 5</div>
+      
+      <h1> Thank you!</h1>
       <p class="description">
         We appreciate you taking the time to give a rating. If you ever need more support,
         don’t hesitate to get in touch!
       </p>
     </div>
-  </div>
-
-
-
-
-
-
-
-  <!-- Rating state end -->
-
-
-
-  <!-- Add rating here -->
-
-
-
-
-
-  <!-- Thank you state end -->
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 
